@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class ListaNumeros {
     public static void main(String[] args) {
-        ArrayList<Integer> listaNumeros = obtenerNumerosAleatorios();
+        ArrayList<Integer> listaNumeros = obtenerNumerosAleatorios(30, 1000);
 
         ArrayList<Integer> numerosPares = listaNumeros.stream()
                 .filter(n -> n%2 == 0)
@@ -14,11 +14,11 @@ public class ListaNumeros {
         numerosPares.forEach(System.out::println);
     }
 
-    private static ArrayList<Integer> obtenerNumerosAleatorios() {
+    public static ArrayList<Integer> obtenerNumerosAleatorios(int nNum, int nMax) {
         ArrayList<Integer> listaNumeros = new ArrayList<>();
-        int i = 30;
+        int i = nNum;
         while (i > 0){
-            listaNumeros.add((int) (Math.random() * 1000));
+            listaNumeros.add((int) ((Math.random() * nMax) + 1));
             i--;
         }
         return listaNumeros;
