@@ -9,7 +9,7 @@ package ejerciciosBasicos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConvertirEnmayusculas {
+public class ConvertirEnMayusculas {
      public static void main (String[] args){
          List<String> palabras = new ArrayList<>(List.of("Maceta", "Persiana", "Carricoche", "Acuoso"));
 
